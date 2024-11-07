@@ -1,0 +1,89 @@
+                body {
+                    padding: 25px;
+                    background-color: #ccc;
+                }
+                
+                .todolist_continer {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+                
+                .todolist_continer .frist {
+                    display: flex;
+                    justify-content: center;
+                    align-items: cenetr;
+                    background-color: #ddd;
+                    padding: 6px;
+                    border-radius: 10px;
+                }
+                
+                .todolist_continer .frist input {
+                    width: 80%;
+                    padding: 5px;
+                    border: none;
+                    border-radius: 6px;
+                }
+                
+                .todolist_continer .frist span {
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: bold;
+                    margin: 0px 10px;
+                    cursor: pointer;
+                }
+                
+                .todolist_continer .second {
+                    background-color: #ddd;
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 10px 0px;
+                }
+                
+                .todolist_continer .second>span {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 10px 0px;
+                    display: block;
+                    width: 95%;
+                }
+                
+                .todolist_continer .second div {
+                    margin: 10px 0px;
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    position: relative;
+                }
+                
+                .todolist_continer .second div.active {
+                    text-decoration: line-through;
+                }
+                
+                .todolist_continer .second div span.one {
+                    position: absolute;
+                    right: 100px;
+                    bottom: 2px;
+                    background-color: red;
+                    color: white;
+                    padding: 7px;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                
+                .todolist_continer .second div span.two {
+                    position: absolute;
+                    right: 12px;
+                    bottom: 5px;
+                    background-color: red;
+                    color: white;
+                    padding: 7px;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }

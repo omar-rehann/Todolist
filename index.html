@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="todolist_continer">
+        <div class="frist">
+            <input type="text" placeholder="Please Enter Task" name="" id="" />
+            <span class="add">Add Task</span>
+
+        </div>
+        <div class="second">
+            <span class="update">No Add Task Before</span>
+            <!--<div>one-->
+            <!--<span class="one" >Ok</span>-->
+            <!--<span class="two">Delete</span>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        let inputel = document.querySelector(".todolist_continer input");
+        let spanEl = document.querySelector(".add");
+        let updateEl = document.querySelector(".update");
+        let section = document.querySelector(".second")
+        spanEl.onclick = function() {
+            if (inputel.value == "") {
+                updateEl.textContent = "Please Enter Task";
+            } else {
+                // inputel.textContent="";
+
+                updateEl.remove();
+                const newDiv = document.createElement("div");
+                const newContent = document.createTextNode(inputel.value);
+                newDiv.appendChild(newContent);
+                let onespan = document.createElement("span");
+                onespan.className = "one";
+                let text_one_span = document.createTextNode("Ok");
+                onespan.appendChild(text_one_span);
+                let twospan = document.createElement("span");
+                twospan.className = "two";
+                let text_two_span = document.createTextNode("Delete");
+                twospan.appendChild(text_two_span);
+
+                newDiv.appendChild(onespan);
+                newDiv.appendChild(twospan);
+                section.appendChild(newDiv);
+                inputel.value = "";
+                onespan.addEventListener("click", function() {
+                    newDiv.classList.add("active");
+                });
+
+                twospan.addEventListener("click", function() {
+                    newDiv.remove();
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
